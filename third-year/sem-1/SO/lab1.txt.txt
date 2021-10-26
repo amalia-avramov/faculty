@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]
+then
+    echo "eroare input"
+fi
+
+rez=0
+for arg in $@
+do
+if [ $((arg%2)) -eq 0 ]
+then
+    rez=`expr $rez + 1`
+fi
+done
+
+echo "Total numere pare: $rez"
